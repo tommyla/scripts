@@ -44,7 +44,7 @@ echo "$(date +%Y-%m-%d) $(date +%H:%M:%S)"
 echo ""
 # mysql database backup, change --all-databases to your database if only one database
 echo "Backing up MySQL"
-mysqldump -u root -p$mysqlpass --all-databases | gzip -9 > $dbbakdir/$(date +%Y-%m-%d-%H.%M.%S)test.db.sql.gz
+mysqldump -u root -p$mysqlpass --all-databases | gzip -9 > $dbbakdir/$(date +%Y-%m-%d-%H.%M.%S).test.db.sql.gz
 echo "MySQL, Done"
 # html files backup
 echo "Backing up Files"
