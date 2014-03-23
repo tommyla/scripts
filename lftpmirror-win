@@ -33,7 +33,7 @@ echo ""
 	    read usrpw
 	    echo "remote path"
 	    read remotepath
-	    echo "local path (/cygwin/driveletter/folder)"
+	    echo "local path (/cygdrive/driveletter/folder)"
 	    read localpath
 	    echo "running lftp"
             ./lftp.exe sftp://$usrpw@$site -e "set sftp:connect-program './ssh.exe'; mirror --verbose --use-pget-n=8 -c '$remotepath' '$localpath'; quit"
@@ -52,7 +52,7 @@ echo ""
             read usrpw
             echo "remote path"
             read remotepath
-            echo "local path (/cygwin/driveletter/folder)"
+            echo "local path (/cygdrive/driveletter/folder)"
             read localpath
             echo "running lftp"
             ./lftp.exe sftp://$usrpw@$site -e "set sftp:connect-program './ssh.exe'; mirror -R --verbose --use-pget-n=8 -c '$localpath' '$remotepath''; quit"
